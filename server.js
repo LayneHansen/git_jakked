@@ -4,7 +4,7 @@ var app = express();
 
 var logger = require("morgan");
 
-// app.use(express.static("public"));
+app.use(express.static("/Develop/public"));
 
 // // Parse the request as JSON
 // app.use(express.urlencoded({ extended: true }));
@@ -13,26 +13,19 @@ app.use(logger("dev"));
 
 var PORT = process.env.PORT || 3000;
 
-// app.get('/', (request, response) => {
-//     // params, query
-//     let demo = request.params.demo
-//     // response.send("okay")
-//     // response.json({ test: true })
-// })
-
 app.get('/', (request, response) => {
     console.log(__dirname + '/index.html')
     response.sendFile(__dirname + '/index.html')
 })
 
 // app.get('/', (request, response) => {
-//     console.log(__dirname + '/index.html')
-//     response.sendFile(__dirname + '/index.html')
+//     console.log(__dirname + '/exercise.html')
+//     response.sendFile(__dirname + '/exercise.html')
 // })
 
 // app.get('/', (request, response) => {
-//     console.log(__dirname + '/index.html')
-//     response.sendFile(__dirname + '/index.html')
+//     console.log(__dirname + '/stats.html')
+//     response.sendFile('/stats.html')
 // })
 
 
