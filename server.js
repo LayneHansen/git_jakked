@@ -4,7 +4,7 @@ var app = express();
 
 var logger = require("morgan");
 
-app.use(express.static("/Develop/public"));
+app.use(express.static(__dirname + "/Develop/public"));
 
 // // Parse the request as JSON
 // app.use(express.urlencoded({ extended: true }));
