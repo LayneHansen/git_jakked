@@ -16,6 +16,9 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+/* Navbar styling controls 
+================================================================*/
 nav {
   background-color: #5793fd;
   color: #ffffff;
@@ -23,6 +26,16 @@ nav {
   padding: 10px;
   line-height: 3;
   font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+#nav-logo {
+  float: left;
+}
+
+#statistics {
+  float: left;
+  padding-left: 25px;
 }
 
 a,
