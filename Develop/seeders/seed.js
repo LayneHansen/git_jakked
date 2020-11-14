@@ -1,10 +1,41 @@
 let mongoose = require("mongoose");
 let db = require("../models");
 
-mongoose.connect("mongodb://localhost/workout", {
+const Schema = mongoose.Schema;
+
+mongoose.connect("mongodb://localhost/workouts", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
+
+const NewWorkout = new Workout ({
+
+  exercisetype: {
+    type: String,
+    trim: false
+  }, 
+
+  weight: {
+    type: Number,
+    required: true
+  },
+
+  sets: {
+    type: Number,
+    required: false
+  },
+
+  reps: {
+    type: Number,
+    required: true
+  },
+
+  duration: {
+    type: Number,
+    required: false
+  }
+})
+
 
 let workoutSeed = [
   {
@@ -134,3 +165,7 @@ db.Workout.deleteMany({})
     console.error(err);
     process.exit(1);
   });
+
+  const Workout = mongoose.model("Workout", NewWorkout);
+
+  module.exports = Workout;
