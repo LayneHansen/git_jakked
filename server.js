@@ -2,17 +2,20 @@ var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 var path = require("path");
+
 var PORT = process.env.PORT || 3000;
-var User = require("./Develop/seeders/seed.js")
+
+// var User = require("./Develop/seeders/seed.js")
+
 var app = express();
 
 
+app.use(logger("dev"));
 app.use(express.static(__dirname + "/Develop/public"));
-
-// // Parse the request as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(logger("dev"));
+
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workouts", { useNewUrlParser: true });
 
 
 // get routes
