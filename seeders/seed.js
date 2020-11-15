@@ -8,34 +8,6 @@ mongoose.connect("mongodb://localhost/workouts", {
   useFindAndModify: false
 });
 
-const NewWorkout = new Workout ({
-
-  exercisetype: {
-    type: String,
-    trim: false
-  }, 
-
-  weight: {
-    type: Number,
-    required: true
-  },
-
-  sets: {
-    type: Number,
-    required: false
-  },
-
-  reps: {
-    type: Number,
-    required: true
-  },
-
-  duration: {
-    type: Number,
-    required: false
-  }
-})
-
 
 let workoutSeed = [
   {
@@ -166,6 +138,4 @@ db.Workout.deleteMany({})
     process.exit(1);
   });
 
-  const Workout = mongoose.model("Workout", NewWorkout);
 
-  module.exports = Workout;
