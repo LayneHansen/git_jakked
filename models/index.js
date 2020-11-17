@@ -7,7 +7,10 @@ const NewWorkout = new Schema ({
         default: () => new Date()
     },
 
-    // day: new Date().setDate(new Date().getDate()-10),
+    totalDuration: {
+        type: Number,
+        default: () => 0
+    },
 
     exercises: [
 
@@ -44,6 +47,12 @@ const NewWorkout = new Schema ({
         duration: {
             type: Number,
             required: false
+        },
+
+        distance: {
+            type: Number,
+            required: false,
+            default: () => 0
         }
     }
     
