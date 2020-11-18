@@ -11,6 +11,8 @@ var PORT = process.env.PORT || 3000;
 
 mongoose.connect("mongodb://localhost/workouts", {
     useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
     useFindAndModify: false
 });
 

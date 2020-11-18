@@ -4,8 +4,10 @@ let db = require("../models");
 const Schema = mongoose.Schema;
 
 mongoose.connect("mongodb://localhost/workouts", {
-  useNewUrlParser: true,
-  useFindAndModify: false
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
 });
 
 
