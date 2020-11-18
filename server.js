@@ -9,7 +9,8 @@ var db = require("./models/index.js")
 var PORT = process.env.PORT || 3000;
 
 
-mongoose.connect("mongodb://localhost/workouts", {
+mongoose.connect(
+    process.env.MONGODB_URI || "mongodb://localhost/workouts", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,

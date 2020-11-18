@@ -3,7 +3,8 @@ let db = require("../models");
 
 const Schema = mongoose.Schema;
 
-mongoose.connect("mongodb://localhost/workouts", {
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/workouts", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
