@@ -20,17 +20,24 @@ body {
 /* Navbar styling controls 
 ================================================================*/
 nav {
-  background-color: #5793fd;
+  background-color: #102c5f;
   color: #ffffff;
   height: 80px;
   padding: 10px;
   line-height: 3;
   font-size: 1.2rem;
   vertical-align: middle;
+  display: flex;
+  margin: auto;
+  border-bottom: solid 6px white;
 }
 
 #nav-logo {
   float: left;
+}
+
+#stats-nav {
+  border-bottom: solid white 6px;
 }
 
 #statistics {
@@ -59,6 +66,11 @@ header {
 
 header h1 {
   transform: skewX(-2deg);
+  color: white;
+}
+
+#app-name {
+  color: white;
 }
 
 select {
@@ -113,7 +125,7 @@ input {
 }
 
 .wrapper {
-  background-color: #f2f8ff;
+  background-color: #4f80b8;
   padding-bottom: 100px;
 }
 
@@ -394,7 +406,7 @@ form > button {
 }
 
 .new-workout {
-  display: flex;
+  display: none;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -420,6 +432,23 @@ form > button {
 .buttons .ui.button {
   margin: 0;
   width: 50%;
+}
+
+#continue-btn {
+  background-color: #102c5f;
+}
+
+#new-workout-button {
+  background-color: rgb(189, 42, 42);
+}
+
+#complete-button {
+  background-color: #102c5f;
+
+}
+
+#add-exercise-button {
+  background-color: rgb(189, 42, 42);
 }
 
 .ui.card h2 {
