@@ -3,7 +3,6 @@ var path = require("path");
 var app = express();
 var logger = require("morgan");
 var mongoose = require("mongoose");
-// var path = require("path");
 var db = require("./models/index.js")
 
 var PORT = process.env.PORT || 3000;
