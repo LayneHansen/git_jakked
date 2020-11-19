@@ -21,8 +21,6 @@ app.use(express.static(path.join(__dirname + "/public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// require("./routes/apiroutes.js")(app);
-// require("./routes/html.js")(app);
 
 app.get('/', (request, response) => {
     console.log(__dirname + '/public')
